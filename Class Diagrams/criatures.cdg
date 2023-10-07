@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="criatures">
+  <ClassDiagramComponents>
+    <Class name="Cards" package="" visibility="public" xPosition="204.0" yPosition="132.0">
+      <Fields>
+        <Field name="life" type="int" visibility="private"/>
+        <Field name="damage" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Main" package="" visibility="public" xPosition="515.0" yPosition="323.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Item" package="" visibility="public" xPosition="802.0" yPosition="152.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Skills" package="" visibility="public" xPosition="515.0" yPosition="152.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Players" package="" visibility="public" xPosition="802.0" yPosition="323.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Team" package="" visibility="public" xPosition="204.0" yPosition="323.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="IA" package="" visibility="public" xPosition="802.0" yPosition="498.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Store" package="" visibility="public" xPosition="515.0" yPosition="498.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Backpack" package="" visibility="public" xPosition="204.0" yPosition="498.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Combat" package="" visibility="public" xPosition="1056.0" yPosition="152.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Mana" package="" visibility="public" xPosition="1056.0" yPosition="498.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Purse" package="" visibility="public" xPosition="1056.0" yPosition="323.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>
