@@ -2,66 +2,132 @@
 
 <ClassDiagram name="criatures">
   <ClassDiagramComponents>
-    <Class name="Cards" package="" visibility="public" xPosition="204.0" yPosition="132.0">
+    <Class name="Cards" package="" visibility="public" xPosition="262.0" yPosition="12.0">
       <Fields>
-        <Field name="life" type="int" visibility="private"/>
         <Field name="damage" type="int" visibility="private"/>
+        <Field name="life" type="int" visibility="private"/>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="abilities" type="List&lt;String&gt;" visibility="private"/>
+        <Field name="manaCost" type="int" visibility="private"/>
       </Fields>
       <Constructors/>
       <Methods/>
     </Class>
-    <Class name="Main" package="" visibility="public" xPosition="515.0" yPosition="323.0">
+    <Class name="Main" package="" visibility="public" xPosition="832.0" yPosition="77.0">
+      <Fields>
+        <Field name="playerLevel" type="int" visibility="private"/>
+        <Field name="playerName" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Abilities" package="" visibility="public" xPosition="507.0" yPosition="253.0">
+      <Fields>
+        <Field name="untitledField" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Players" package="" visibility="public" xPosition="1310.0" yPosition="172.0">
+      <Fields>
+        <Field name="manaPoints" type="int" visibility="private"/>
+        <Field name="healthPoints" type="int" visibility="private"/>
+        <Field name="playerDeck" type="Deck" visibility="private"/>
+        <Field name="hand" type="List&lt;Cards&gt;" visibility="private"/>
+        <Field name="playerName" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Deck" package="" visibility="public" xPosition="17.0" yPosition="253.0">
+      <Fields>
+        <Field name="CardsInDeck" type="List&lt;Cards&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="IA" package="" visibility="public" xPosition="1400.0" yPosition="12.0">
+      <Fields>
+        <Field name="manaPoints" type="int" visibility="private"/>
+        <Field name="healthPoints" type="int" visibility="private"/>
+        <Field name="shield" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Store" package="" visibility="public" xPosition="1176.0" yPosition="415.0">
+      <Fields>
+        <Field name="storeFunds" type="int" visibility="private"/>
+        <Field name="availableSpells" type="List&lt;SpellCard&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Combat" package="" visibility="public" xPosition="977.0" yPosition="253.0">
+      <Fields>
+        <Field name="AttackModifier" type="double" visibility="private"/>
+        <Field name="AttackValue" type="int" visibility="private"/>
+        <Field name="DefenseValue" type="float" visibility="private"/>
+        <Field name="AttackerName" type="String" visibility="private"/>
+        <Field name="AttackResult" type="String" visibility="private"/>
+        <Field name="DefenderName" type="String" visibility="private"/>
+        <Field name="untitledField" type="Object" visibility="private"/>
+        <Field name="CombatLog" type="List&lt;String&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Mana" package="" visibility="public" xPosition="277.0" yPosition="454.0">
+      <Fields>
+        <Field name="manaPoints" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Purse" package="" visibility="public" xPosition="785.0" yPosition="367.0">
+      <Fields>
+        <Field name="coins" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="SpellCard" package="" visibility="public" xPosition="477.0" yPosition="12.0">
+      <Fields>
+        <Field name="manaCost" type="int" visibility="private"/>
+        <Field name="spellName" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="PokemonCards" package="" visibility="public" xPosition="51.0" yPosition="12.0">
       <Fields/>
       <Constructors/>
       <Methods/>
     </Class>
-    <Class name="Item" package="" visibility="public" xPosition="802.0" yPosition="152.0">
-      <Fields/>
+    <Class name="CardManager" package="" visibility="public" xPosition="236.0" yPosition="267.0">
+      <Fields>
+        <Field name="allPokemonCards" type="List&lt;PokemonCard&gt;" visibility="private"/>
+        <Field name="allSpellCards" type="List&lt;SpellCard&gt;" visibility="private"/>
+      </Fields>
       <Constructors/>
       <Methods/>
     </Class>
-    <Class name="Skills" package="" visibility="public" xPosition="515.0" yPosition="152.0">
-      <Fields/>
+    <Class name="GameLogic" package="" visibility="public" xPosition="1047.0" yPosition="86.0">
+      <Fields>
+        <Field name="turnNumber" type="int" visibility="private"/>
+        <Field name="players" type="List&lt;Player&gt;" visibility="private"/>
+      </Fields>
       <Constructors/>
       <Methods/>
     </Class>
-    <Class name="Players" package="" visibility="public" xPosition="802.0" yPosition="323.0">
-      <Fields/>
-      <Constructors/>
-      <Methods/>
-    </Class>
-    <Class name="Team" package="" visibility="public" xPosition="204.0" yPosition="323.0">
-      <Fields/>
-      <Constructors/>
-      <Methods/>
-    </Class>
-    <Class name="IA" package="" visibility="public" xPosition="802.0" yPosition="498.0">
-      <Fields/>
-      <Constructors/>
-      <Methods/>
-    </Class>
-    <Class name="Store" package="" visibility="public" xPosition="515.0" yPosition="498.0">
-      <Fields/>
-      <Constructors/>
-      <Methods/>
-    </Class>
-    <Class name="Backpack" package="" visibility="public" xPosition="204.0" yPosition="498.0">
-      <Fields/>
-      <Constructors/>
-      <Methods/>
-    </Class>
-    <Class name="Combat" package="" visibility="public" xPosition="1056.0" yPosition="152.0">
-      <Fields/>
-      <Constructors/>
-      <Methods/>
-    </Class>
-    <Class name="Mana" package="" visibility="public" xPosition="1056.0" yPosition="498.0">
-      <Fields/>
-      <Constructors/>
-      <Methods/>
-    </Class>
-    <Class name="Purse" package="" visibility="public" xPosition="1056.0" yPosition="323.0">
-      <Fields/>
+    <Class name="PLayers2" package="" visibility="public" xPosition="1490.0" yPosition="172.0">
+      <Fields>
+        <Field name="manaPoints" type="int" visibility="private"/>
+        <Field name="healthPoints" type="int" visibility="private"/>
+        <Field name="playerDeck" type="Deck" visibility="private"/>
+        <Field name="hand" type="List&lt;Cards&gt;" visibility="private"/>
+        <Field name="playerName" type="String" visibility="private"/>
+      </Fields>
       <Constructors/>
       <Methods/>
     </Class>
