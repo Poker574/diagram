@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="criatures">
+  <ClassDiagramComponents>
+    <Class name="Cards" package="" visibility="public" xPosition="309.0" yPosition="10.0">
+      <Fields>
+        <Field name="damage" type="int" visibility="private"/>
+        <Field name="life" type="int" visibility="private"/>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="abilities" type="List&lt;String&gt;" visibility="private"/>
+        <Field name="manaCost" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Players" package="" visibility="public" xPosition="1195.0" yPosition="525.0">
+      <Fields>
+        <Field name="manaPoints" type="int" visibility="private"/>
+        <Field name="healthPoints" type="int" visibility="private"/>
+        <Field name="playerDeck" type="Deck" visibility="private"/>
+        <Field name="hand" type="List&lt;Cards&gt;" visibility="private"/>
+        <Field name="playerName" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Deck" package="" visibility="public" xPosition="1181.0" yPosition="273.0">
+      <Fields>
+        <Field name="CardsInDeck" type="List&lt;Cards&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="IA" package="" visibility="public" xPosition="1586.0" yPosition="267.0">
+      <Fields>
+        <Field name="manaPoints" type="int" visibility="private"/>
+        <Field name="healthPoints" type="int" visibility="private"/>
+        <Field name="shield" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Store" package="" visibility="public" xPosition="806.0" yPosition="768.0">
+      <Fields>
+        <Field name="storeFunds" type="int" visibility="private"/>
+        <Field name="availableSpells" type="List&lt;SpellCard&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Combat" package="" visibility="public" xPosition="1860.0" yPosition="677.0">
+      <Fields>
+        <Field name="AttackModifier" type="double" visibility="private"/>
+        <Field name="AttackValue" type="int" visibility="private"/>
+        <Field name="DefenseValue" type="float" visibility="private"/>
+        <Field name="AttackerName" type="String" visibility="private"/>
+        <Field name="AttackResult" type="String" visibility="private"/>
+        <Field name="DefenderName" type="String" visibility="private"/>
+        <Field name="untitledField" type="Object" visibility="private"/>
+        <Field name="CombatLog" type="List&lt;String&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Mana" package="" visibility="public" xPosition="1865.0" yPosition="48.0">
+      <Fields>
+        <Field name="manaPoints" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Purse" package="" visibility="public" xPosition="1252.0" yPosition="777.0">
+      <Fields>
+        <Field name="coins" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="SpellCard" package="" visibility="public" xPosition="566.0" yPosition="395.0">
+      <Fields>
+        <Field name="manaCost" type="int" visibility="private"/>
+        <Field name="spellName" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="PokemonCards" package="" visibility="public" xPosition="309.0" yPosition="787.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="CardManager" package="" visibility="public" xPosition="786.0" yPosition="431.0">
+      <Fields>
+        <Field name="allPokemonCards" type="List&lt;PokemonCard&gt;" visibility="private"/>
+        <Field name="allSpellCards" type="List&lt;SpellCard&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="GameLogic" package="" visibility="public" xPosition="1586.0" yPosition="556.0">
+      <Fields>
+        <Field name="turnNumber" type="int" visibility="private"/>
+        <Field name="players" type="List&lt;Player&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Interface name="Abilities" package="" visibility="public" xPosition="309.0" yPosition="335.0">
+      <Methods/>
+    </Interface>
+    <Class name="CardTypes" package="" visibility="public" xPosition="42.0" yPosition="385.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="type" type="String" visibility="private"/>
+        <Field name="untitledField" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="cards2" source="Deck" target="CardManager" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="spells" source="SpellCard" target="Abilities" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="reward" source="Purse" target="Combat" type="Default" sourceCardinality="0..1" targetCardinality="0..*" collectionType="List"/>
+    <IsRelation name="is" source="CardTypes" target="Cards"/>
+    <HasRelation name="deckes" source="Deck" target="Players" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="cardstypes" source="PokemonCards" target="CardTypes" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="stoke" source="Store" target="PokemonCards" type="Composition" sourceCardinality="0..1" targetCardinality="0..1"/>
+    <HasRelation name="gamers" source="Players" target="GameLogic" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="SpellCard" target="Cards"/>
+    <HasRelation name="cards" source="CardManager" target="Store" type="Composition" sourceCardinality="0..1" targetCardinality="0..*" collectionType="List"/>
+    <HasRelation name="mullet" source="Store" target="Purse" type="Aggregation" sourceCardinality="0..1" targetCardinality="0..*" collectionType="List"/>
+    <HasRelation name="IA" source="IA" target="GameLogic" type="Composition" sourceCardinality="0..1" targetCardinality="0..1"/>
+    <HasRelation name="cadsspell" source="PokemonCards" target="SpellCard" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="game" source="GameLogic" target="Combat" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="LIFE" source="Mana" target="Combat" type="Composition" sourceCardinality="0..1" targetCardinality="0..*" collectionType="List"/>
+    <HasRelation name="life2" source="Mana" target="Cards" type="Aggregation" sourceCardinality="0..1" targetCardinality="0..*" collectionType="List"/>
+    <HasRelation name="cards" source="CardTypes" target="Abilities" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
